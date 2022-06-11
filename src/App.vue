@@ -34,8 +34,19 @@ const deleteUser = (id) => {
   <main class="main">
     <h1>Team Manager</h1>
     <form @submit.prevent="createUser" class="input-group">
-      <input type="text" placeholder="Name" v-model="user_input.name" autofocus />
-      <input class="input-label" type="email" placeholder="Email" v-model="user_input.email" />
+      <input 
+        type="text "
+        class="input-label"
+        placeholder="Name"
+        v-model="user_input.name"
+        autofocus
+      />
+      <input
+        class="input-label"
+        type="email"
+        placeholder="Email"
+        v-model="user_input.email"
+      />
       <input class="btn" type="submit" value="Create user" />
     </form>
 
@@ -76,12 +87,14 @@ const deleteUser = (id) => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-transform: capitalize
 }
 .user {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px 0;
+  text-transform: capitalize
 }
 
 .btn {
@@ -97,8 +110,34 @@ const deleteUser = (id) => {
   align-items: center;
 }
 
-input{
+input {
   margin: 5px;
   /* border:none; */
 }
+
+.input-group {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  outline: 2px solid #fff;
+}
+
+/* .input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, 10px);
+  transition: transform .25s;
+}
+
+.input:focus+.input-label,
+.input:valid+.input-label {
+  transform: translate(10px, -14px) scale(.8);
+  color: #d1e5fe;
+  padding-inline: 5px;
+  background-color: #242329;
+} */
 </style>
